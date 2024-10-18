@@ -1,4 +1,3 @@
-#works in command line, but not within pycharm
 import turtle as t
 t.position()  #initialize to co-ordinates 0,0
 t.bgcolor("blue")
