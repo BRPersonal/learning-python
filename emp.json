@@ -1,0 +1,14 @@
+{
+    "name": "Balaji",
+    "age": 50,
+    "job": "Ok",
+    "address": {
+        "doorNo": "169/2",
+        "street": "East Uthra street",
+        "city": "srirangam, Trichy",
+        "state": "TamilNadu",
+        "country": "India",
+        "zip": "620 006"
+    },
+    "timeStamp": "12-09-2024 17:15:07"
+}
