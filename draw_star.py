@@ -4,7 +4,6 @@ t.bgcolor("blue")
 t.pencolor("orange")
 t.pensize(8)
 t.up()
-#t.goto(-200,0)
 t.down()
 
 for _ in range(10):
