@@ -20,7 +20,7 @@ def add_two_numbers(x1:int,x2:int) -> None :
     sum = x1 + x2
     print(f"sum of {x1} and {x2} is {sum}")
 
-if (__name__ == "__main__"):
+if __name__ == "__main__":
     print(slow_function("test"))
     print("-" * 50)
     print(add_two_numbers(4,5))
