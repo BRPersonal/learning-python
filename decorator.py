@@ -10,7 +10,7 @@ def measure(f):
     return timing_decorator
 
 @measure
-def slow_function(p):
+def slow_function(p) -> str:
     sleep(0.7)
     print("I am first")
     return f"Finished {p}"
