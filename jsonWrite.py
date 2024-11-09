@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 
 # Get the current timestamp
-current_timestamp = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+current_timestamp = datetime.now().strftime("%d-%b-%Y %H:%M:%S")
 
 emp = {
         "name": "Balaji",
