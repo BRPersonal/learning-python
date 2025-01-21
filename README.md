@@ -36,6 +36,27 @@ You could also use pip freeze command to capture packages currently
 installed in the environment and create requirements.txt
 $ pip freeze > requirements.txt
 
+Note on using PyCharm editor
+-------------------
+$mkdir -p ~/poc/python/PySpark-Tutorial
+$ cd ~/poc/python/PySpark-Tutorial
+$ python -m venv .pyspark-env
+$ source .pyspark-env/bin/activate
+prompt changes
+(.pyspark-env) $ pip install pyspark
+(.pyspark-env) $ pip install findspark
+(.pyspark-env) $ pip install jupyterlab
+
+Launch jupyter notebook
+(.pyspark-env) $ jupyter-lab
+
+Dont use jupyterlab. Let us do normal python code itself and use PyCharm. This is best
+After doing the above steps , open the project in PyCharm. In the bottom left panel,
+click on Interpreter(label will be something like Python 3.12). Click on
+"Add New Interpreter"--"Add Local Interpreter". On the left nav select "virtualenv Environment"
+and in the right panel choose radio button "Existing" and choose the current project's venv folder
+Now if you open the terminal , you will see virtual environment prompt.
+
 
 12 Production-Grade Python Code Styles
 ----------------------------------
