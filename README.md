@@ -7,10 +7,16 @@ $ pip install virtualenv
 
 #Open a terminal in project root directory and run this command
 #This will Create virtual environment. This will create  env directory
+#better way is to use python command itself to create virtual environment. see "Note on using PyCharm editor"
 $ virtualenv env
 
 #activate virtual environment
 $ source env/bin/activate
+
+#To deactivate a virtual environment 
+(.venv) $ deactivate
+$
+
 
 You will get into env prompt. Now you are inside virtual environment
 Now after this, anything that you install is contained within this env
@@ -40,15 +46,15 @@ Note on using PyCharm editor
 -------------------
 $mkdir -p ~/poc/python/PySpark-Tutorial
 $ cd ~/poc/python/PySpark-Tutorial
-$ python -m venv .pyspark-env
-$ source .pyspark-env/bin/activate
+$ python -m venv .venv
+$ source .venv/bin/activate
 prompt changes
-(.pyspark-env) $ pip install pyspark
-(.pyspark-env) $ pip install findspark
-(.pyspark-env) $ pip install jupyterlab
+(.venv) $ pip install pyspark
+(.venv) $ pip install findspark
+(.venv) $ pip install jupyterlab #This is not required
 
 Launch jupyter notebook
-(.pyspark-env) $ jupyter-lab
+(.venv) $ jupyter-lab
 
 Dont use jupyterlab. Let us do normal python code itself and use PyCharm. This is best
 After doing the above steps , open the project in PyCharm. In the bottom left panel,
@@ -56,6 +62,9 @@ click on Interpreter(label will be something like Python 3.12). Click on
 "Add New Interpreter"--"Add Local Interpreter". On the left nav select "virtualenv Environment"
 and in the right panel choose radio button "Existing" and choose the current project's venv folder
 Now if you open the terminal , you will see virtual environment prompt.
+
+Sometimes IDE may not reflect the settings and you might see error "Invalid Interperter" 
+close the editor and reopen it
 
 
 12 Production-Grade Python Code Styles
@@ -160,14 +169,14 @@ class def MyClass:
     def func1(self):
         try:
             """code for func1"""
-            logger. info("'func1 success")
+            logger.info("'func1 success")
         except Exception as e:
             logger.error (str(e))
 
     def func2(self):
         try:
             """code for func2""
-            logger. info("'func2 success")
+            logger.info("'func2 success")
         except Exception as e:
             logger.error (str(e))
 
@@ -204,3 +213,17 @@ class def MyClass:
     @handle_exception_and_logging
     def func1(self):
         """code for func3"""
+
+8)You can use na object as a method if the class of the object
+has defined __call__ method
+
+class Greeting:
+    def __init__(self,name:str) -> None:
+        self.name = name
+    
+    def __call__(self,greeting:str) -> str:
+        return f"{greeting}, {self.name}"
+
+message = Greeting("Krishna")
+text=message("Jai Shri")
+print(text)
