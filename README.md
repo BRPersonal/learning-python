@@ -227,3 +227,6 @@ class Greeting:
 message = Greeting("Krishna")
 text=message("Jai Shri")
 print(text)
+
+9)Refer arguments_demo.py for different ways of passing 
+arguments to a function
