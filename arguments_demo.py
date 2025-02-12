@@ -23,7 +23,7 @@ def print_info(**kwargs):
 
 """
     You could also combine *args and **kwargs
-    but args should come before kwargs
+    but args should come before kwargs. kwargs should be placed last
 """
 def mixed_function(arg1, arg2, *args, **kwargs):
     print("-" * 30)
