@@ -57,11 +57,11 @@ Launch jupyter notebook
 (.venv) $ jupyter-lab
 
 Dont use jupyterlab. Let us do normal python code itself and use PyCharm. This is best
-After doing the above steps , open the project in PyCharm. In the bottom left panel,
-click on Interpreter(label will be something like Python 3.12). Click on
-"Add New Interpreter"--"Add Local Interpreter". On the left nav select "virtualenv Environment"
-and in the right panel choose radio button "Existing" and choose the current project's venv folder
-Now if you open the terminal , you will see virtual environment prompt.
+After doing the above steps , open the project in PyCharm. open a terminal and type which python
+It will show global installation. You will also see a link to choose the project specific
+python interpreter. click on the link and choose it. close the terminal and open again
+you will see virtual env got activated. Typing which python will now correctly display 
+the project specific virtual environment
 
 Sometimes IDE may not reflect the settings and you might see error "Invalid Interperter" 
 close the editor and reopen it
