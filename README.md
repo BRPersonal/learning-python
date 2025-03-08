@@ -61,7 +61,11 @@ After doing the above steps , open the project in PyCharm. open a terminal and t
 It will show global installation. You will also see a link to choose the project specific
 python interpreter. click on the link and choose it. close the terminal and open again
 you will see virtual env got activated. Typing which python will now correctly display 
-the project specific virtual environment
+the project specific virtual environment. Alternatively, you could also open a python file
+in the editor and it will say that python interpreter is not configured and show a link. click
+on that link choose add interpreter and in the dialog choose "Existing" and choose .venv/bin/python
+and click ok
+
 
 Sometimes IDE may not reflect the settings and you might see error "Invalid Interperter" 
 close the editor and reopen it
