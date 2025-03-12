@@ -21,9 +21,9 @@ def scrape_t20i_runs(url):
             # Look for the T20I row
             for row in rows:
                 cols = row.find_all('td')
-                if cols and cols[0].text.strip() == 'T20I':
-                    # The runs are in the third column (index 2)
-                    t20i_runs = cols[4].text.strip()
+                if cols and cols[0].text.strip() == 'T20':
+                    # The runs are in the fourth column (index 3)
+                    t20i_runs = cols[3].text.strip()
                     return t20i_runs
 
         print("Couldn't find T20I stats in the table.")
