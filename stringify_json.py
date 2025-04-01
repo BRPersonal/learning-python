@@ -2,7 +2,7 @@ import json
 from datetime import date,datetime
 from decimal import Decimal
 
-
+from custom_json_encoder import CustomJSONEncoder
 
 input_data = [
     {
@@ -32,14 +32,6 @@ input_data = [
     }
 ]
 
-# Custom JSON Encoder
-class CustomJSONEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, (date,datetime)):
-            return obj.isoformat()  # Convert datetime to ISO 8601 string
-        if isinstance(obj, Decimal):
-            return float(obj)  # Convert Decimal to float
-        return super().default(obj)
 
 
 # Serialize using the custom encoder
