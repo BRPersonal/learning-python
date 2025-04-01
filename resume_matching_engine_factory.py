@@ -1,5 +1,4 @@
 from resume_matching_engine import ResumeMatchingEngine
-from resume_score import ResumeScore
 
 from resume_matching_engine_chat_gpt import ChatGptEngine
 from resume_matching_engine_pdf_miner import PdfMinerEngine
