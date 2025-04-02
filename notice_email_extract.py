@@ -28,15 +28,6 @@ class NoticeEmailExtract(BaseModel):
         (if any)""",
     )
 
-    def model_dump(self, **kwargs):
-        dump_dict = super().model_dump(**kwargs)
-        dump_dict['date_of_notice'] = self.date_of_notice
-        return dump_dict
-
-    def model_dump_json(self, **kwargs):
-        dump_dict = self.model_dump()
-        return json.dumps(dump_dict, cls=CustomJSONEncoder)
-
     @staticmethod
     def _convert_string_to_date(date_str: str | None) -> date | None:
         if not date_str:
@@ -62,13 +53,15 @@ if __name__ == "__main__":
     notice_str = notice_email_extract.model_dump_json()
     print(f"notice_str: {notice_str}")
 
-    #deserialize from json string
+
     #convert the notice_str to json dictionary
     notice_dict = json.loads(notice_str)
     #set the date_of_notice_str to date_of_notice
     notice_dict['date_of_notice_str'] = notice_dict['date_of_notice']
 
+    #deserialize from json string derived from modified dictionary
     notice_email_extract_from_json = NoticeEmailExtract.model_validate_json(json.dumps(notice_dict))
+
     print(f"notice_email_extract_from_json: {notice_email_extract_from_json}")
     print(f"type(notice_email_extract_from_json): {type(notice_email_extract_from_json)}")
     print(f"type(notice_email_extract_from_json.date_of_notice): {type(notice_email_extract_from_json.date_of_notice)}")
