@@ -1,8 +1,7 @@
-from datetime import datetime,date
-from pydantic import BaseModel, Field, computed_field
 import json
+from datetime import datetime, date
 
-from custom_json_encoder import CustomJSONEncoder
+from pydantic import BaseModel, Field, computed_field
 
 
 #Field is optional and it provides metadata about the field.
