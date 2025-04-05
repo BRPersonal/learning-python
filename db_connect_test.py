@@ -6,7 +6,7 @@ from pandas.core.frame import DataFrame
 from sqlalchemy import create_engine,text
 
 # Load environment variables from .env file
-load_dotenv()
+load_dotenv(override=True)
 
 # Database connection parameters
 db_config = {
