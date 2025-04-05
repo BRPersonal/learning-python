@@ -234,3 +234,17 @@ print(text)
 
 9)Refer arguments_demo.py for different ways of passing 
 arguments to a function
+
+Github reporting
+---------------
+$python github_reporter.py
+Enter the GitHub repository name (e.g., username/repo_name): 
+
+sample repos
+-----
+TeamFleetStudio/fs-labs-erp-ai-be
+wallyax/api-management-tyk
+TeamFleetStudio/fs-labs-security-api-java
+TeamFleetStudio/fs-labs-erp-ai-fe
+TeamFleetStudio/fs-labs-erp-ai-auth
+
