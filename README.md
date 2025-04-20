@@ -48,6 +48,7 @@ $mkdir -p ~/poc/python/PySpark-Tutorial
 $ cd ~/poc/python/PySpark-Tutorial
 $ python -m venv .venv
 $ source .venv/bin/activate
+$ pip install --upgrade pip
 prompt changes
 (.venv) $ pip install pyspark
 (.venv) $ pip install findspark
