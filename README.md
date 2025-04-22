@@ -249,3 +249,4 @@ TeamFleetStudio/fs-labs-security-api-java
 TeamFleetStudio/fs-labs-erp-ai-fe
 TeamFleetStudio/fs-labs-erp-ai-auth
 
+Added google_genai_demo.py using gemma-3 model
