@@ -2,6 +2,7 @@ from github import Github
 import matplotlib.pyplot as plt
 import os
 from dotenv import load_dotenv
+from datetime import date
 
 # Load environment variables from .env file
 load_dotenv(override=True)
@@ -50,10 +51,12 @@ print("Generating pie chart")
 labels = commit_percentages.keys()
 sizes = commit_percentages.values()
 
+today = date.today().strftime("%d-%b-%Y")
+
 # Plot
 plt.figure(figsize=(10, 7))
 plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)
 plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-plt.title(f"repository: {repo_name} \n Contribution Percentage by Commits\n")
+plt.title(f"Reporting Date:{today}\nrepository: {repo_name}\nContribution Percentage by Commits\n")
 
 plt.show()
