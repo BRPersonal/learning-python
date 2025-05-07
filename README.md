@@ -50,13 +50,15 @@ $ cd ~/poc/python/PySpark-Tutorial
 #create virtual environment and install pip and dotenv
 $ python -m venv .venv
 $ source .venv/bin/activate
-$ pip install --upgrade pip
-$ pip install python-dotenv
+prompt changes.
+(.venv) $ pip install --upgrade pip
+(.venv) $ pip install python-dotenv
 
-prompt changes. Install necessary libraries
+#Install necessary libraries
 (.venv) $ pip install pyspark
 (.venv) $ pip install findspark
 
+Add a .py file - any simple file will do
 Now open the project in pyCharm
 Go to terminal and type which python
 Output will show global installation folder
@@ -68,8 +70,6 @@ Choose radio button "Existing" and click Ok
 Go to terminal and type which python
 Output will show local installation folder
 command prompt will have "(.venv)" at the beginning
-
-
 
 
 Sometimes IDE may not reflect the settings and you might see error "Invalid Interperter" 
