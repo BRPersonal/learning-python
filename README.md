@@ -46,26 +46,30 @@ Note on using PyCharm editor
 -------------------
 $mkdir -p ~/poc/python/PySpark-Tutorial
 $ cd ~/poc/python/PySpark-Tutorial
+
+#create virtual environment and install pip and dotenv
 $ python -m venv .venv
 $ source .venv/bin/activate
 $ pip install --upgrade pip
-prompt changes
+$ pip install python-dotenv
+
+prompt changes. Install necessary libraries
 (.venv) $ pip install pyspark
 (.venv) $ pip install findspark
-(.venv) $ pip install jupyterlab #This is not required
 
-Launch jupyter notebook
-(.venv) $ jupyter-lab
+Now open the project in pyCharm
+Go to terminal and type which python
+Output will show global installation folder
+Open any .py file
+Click on link "Configure Python Interpreter"
+Click "Add New Interpreter"--> "Add local interpreter"
+Choose radio button "Existing" and click Ok
 
-Dont use jupyterlab. Let us do normal python code itself and use PyCharm. This is best
-After doing the above steps , open the project in PyCharm. open a terminal and type which python
-It will show global installation. You will also see a link to choose the project specific
-python interpreter. click on the link and choose it. close the terminal and open again
-you will see virtual env got activated. Typing which python will now correctly display 
-the project specific virtual environment. Alternatively, you could also open a python file
-in the editor and it will say that python interpreter is not configured and show a link. click
-on that link choose add interpreter and in the dialog choose "Existing" and choose .venv/bin/python
-and click ok
+Go to terminal and type which python
+Output will show local installation folder
+command prompt will have "(.venv)" at the beginning
+
+
 
 
 Sometimes IDE may not reflect the settings and you might see error "Invalid Interperter" 
