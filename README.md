@@ -242,6 +242,7 @@ arguments to a function
 
 Github reporting
 ---------------
+Put your github access token in .env
 $python github_reporter.py
 Enter the GitHub repository name (e.g., username/repo_name): 
 
