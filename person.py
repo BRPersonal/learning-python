@@ -6,6 +6,16 @@ More particularly, static and class method appears to be same
 A class can declare class variables(i.e, static variables shared by all objects)
 and instance variables. (specific to each object)
 
+Use static method when you dont need access to class variables
+and instance variables
+
+Use class method when you need access to class variables. It
+works well with inheritance also. The first arg cls passed
+to a class method will refer to actual subclass that is being
+used to call the class method
+
+class methods are typically used for creating alternate constructors
+
 """
 class Person:
     species = "Homo sapiens"  # Class variable
