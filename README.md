@@ -242,12 +242,14 @@ arguments to a function
 
 Github reporting
 ---------------
+Github security logs https://github.com/settings/security-log
 Put your github access token in .env
 $python github_reporter.py
 Enter the GitHub repository name (e.g., username/repo_name): 
 
 sample repos
 -----
+TeamFleetStudio/campus-recruitment-2.0-be
 TeamFleetStudio/fs-labs-erp-ai-be
 wallyax/api-management-tyk
 TeamFleetStudio/fs-labs-security-api-java
