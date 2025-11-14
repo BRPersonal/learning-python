@@ -17,4 +17,6 @@ for _ in range(10):
 print("Diagram completed. Close the app")
 t.hideturtle()
 t.done()
+print("User has Closed the app. Bye.")
+
 
