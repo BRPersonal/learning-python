@@ -48,6 +48,11 @@ def convert_notebook_to_python(notebook_path) -> None:
             for line in source:
                 # Remove trailing newlines as we'll add them back
                 line = line.rstrip('\n')
+
+                #comment pip install lines
+                if line.startswith('!') or line.startswith('%'):
+                    line = "#" + line
+                    
                 code_lines.append(line)
 
             # Add empty line between cells
