@@ -33,9 +33,9 @@ $ which python
 Install the necessary dependencies in this virtual environment.
 (env) is a prompt that indicates you are in virtual environment. It is
 not part of the command
-$ (env) pip install -r requirements.txt
+(env) $  pip install -r requirements.txt
 
-To check what versions are installed in virtual environment run
+To check what packages are installed in virtual environment run
 $ pip list
 
 You could also use pip freeze command to capture packages currently
@@ -91,7 +91,9 @@ snacks = ["bonda","biscuit"]
 print(first_snack)
 print(second_snack)
 
-
+output
+bonda
+biscuit
 
 2)List Comprehension
 
@@ -101,9 +103,12 @@ ls = [number ** 2
       if (number % 2 == 1)]
 print(ls)
 
+output
+[1, 9, 25, 49, 81]
+
 3)Combining strings using brackets
 
-#You dont need + inside brackets
+#You dont need + for concatenating strings inside brackets
 variable1="v1"
 variable2="v2"
 error="err"
@@ -115,6 +120,10 @@ f"{variable1=} and {variable2=} "
 f"due to the following error: {error}. " 
 f"Retrying in {RETRY_INTERVAL} seconds"
 )
+print(error_log_message)
+
+output:
+ERROR. Failed to perform computation on variable1='v1' and variable2='v2' due to the following error: err. Retrying in 5 seconds
 
 4)Indexing nested dictionaries
 d={
@@ -143,7 +152,9 @@ def descriptive_function_name ( list_of_names: list[str],
     """
     This is the Docstring, and it describes what the function does:
     Args:
-    list_of_names (lististrl): list of names used in ... list_of_numbers (list[intl): list of nunbers used in ... is_dryrun (bool): if True, no write operations are performed
+    list_of_names (list[str]): list of names used in ... 
+    list_of_numbers (list[int]): list of nunbers used in ... 
+    is_dryrun (bool): if True, no write operations are performed
     Returns
     (list[int]) a list of numbers that ...
     """
@@ -223,7 +234,7 @@ class def MyClass:
     def func1(self):
         """code for func3"""
 
-8)You can use na object as a method if the class of the object
+8)You can use an object as a method if the class of the object
 has defined __call__ method
 
 class Greeting:
@@ -234,8 +245,11 @@ class Greeting:
         return f"{greeting}, {self.name}"
 
 message = Greeting("Krishna")
-text=message("Jai Shri")
+text=message("Hello")
 print(text)
+
+output
+Hello, Krishna
 
 9)Refer arguments_demo.py for different ways of passing 
 arguments to a function
@@ -257,3 +271,13 @@ TeamFleetStudio/fs-labs-erp-ai-fe
 TeamFleetStudio/fs-labs-erp-ai-auth
 
 Added google_genai_demo.py using gemma-3 model
+
+Files that needs .env
+-------
+$ find . -name "*.py" |xargs grep "load_dotenv"
+./db_connect_test.py:from dotenv import load_dotenv
+./db_connect_test.py:load_dotenv(override=True)
+./google_genai_demo.py:from dotenv import load_dotenv
+./google_genai_demo.py:load_dotenv(override=True)
+./github_reporter.py:from dotenv import load_dotenv
+./github_reporter.py:load_dotenv(override=True)
